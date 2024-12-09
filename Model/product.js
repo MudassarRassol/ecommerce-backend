@@ -29,7 +29,13 @@ const product = mongoose.Schema({
     category: {
         type: String,
         required: true,
-        enum: ['Electronics', 'Clothing', 'Books', 'Toys', 'Home & Garden']
+        enum: ['electronics', 'clothing', 'books', 'toys', 'home & garden'],
+        lowercase: true
+    },
+    productstatus : {
+        type: String,
+        enum: [' in stock ', 'out of stock '],
+        default: 'in stock'
     },
     image: {
         type: String,

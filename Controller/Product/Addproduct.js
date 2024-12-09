@@ -2,7 +2,7 @@ import productmodel from "../../Model/product.js";
 import uploadImage from "../../Helper/cloudniary.js";
 const addproduct = async(req,res)=>{
     try{
-        const {name,description,price,quantity,totalsold,category} = req.body;
+        const {name,description,price,quantity,totalsold,category,productstatus} = req.body;
 
         const path = req.file?.path;
         const imageUrl = await uploadImage(path,"Product");
@@ -13,6 +13,7 @@ const addproduct = async(req,res)=>{
                 price,
                 quantity,
                 totalsold,
+                productstatus,
                 image : imageUrl,
                 category,
                 seller: req.user.id,

@@ -26,11 +26,6 @@ const createuser = mongoose.Schema({
         enum: ['user', 'admin'],
         default: 'user'
     },
-    productstatus : {
-        type: String,
-        enum: [' in stock ', 'out of stock '],
-        default: 'in stock'
-    },
     Profilephoto:{
         type: String,
         default: 'https://static.vecteezy.com/system/resources/previews/045/944/199/large_2x/male-default-placeholder-avatar-profile-gray-picture-isolated-on-background-man-silhouette-picture-for-user-profile-in-social-media-forum-chat-greyscale-illustration-vector.jpg',
